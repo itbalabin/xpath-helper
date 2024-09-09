@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>XPath Helper</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="container" style="width: 500px;">
+        <div class="text-center mb-3">
+            <img src="../images/login-96.png" alt="">
+        </div>
+        <div class="input-group mb-1 p-0 m-0">
+            <span id="userIdSpan" class="input-group-text" id="basic-addon1">input</span>
+            <input id="text-input" type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+            <button id="copy-text" type="button" class="btn btn-secondary svg-button btn-sm p-0">
+                <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M17.676 14.248C17.676 15.8651 16.3651 17.176 14.748 17.176H7.428C5.81091 17.176 4.5 15.8651 4.5 14.248V6.928C4.5 5.31091 5.81091 4 7.428 4H14.748C16.3651 4 17.676 5.31091 17.676 6.928V14.248Z"
+                            stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M10.252 20H17.572C19.1891 20 20.5 18.689 20.5 17.072V9.75195" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </g>
+                </svg>
+            </button>
+            <button id="clear-text" type="button" class="btn btn-primary bg-danger svg-button btn-sm p-0">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path d="M18 6L6 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+        </div>
+        <section class="layout mb-1">
+            <div class="grow0">
+                <!-- "btn-primary", "btn-secondary", "btn-negative", "btn-positive" -->
+                <button id="text-grp-button-1" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">text()</button>
+            </div>
+            <div class="grow0">
+                <button id="text-grp-button-2" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">Attribute</button>
+            </div>
+            <div class="grow0">
+                <button id="text-grp-button-3" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">Contains</button>
+            </div>
+            <div class="grow0">
+                <button id="text-grp-button-4" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">Clear</button>
+            </div>
+        </section>
+        <section class="layout mb-1">
+            <div class="grow0">
+                <button id="text-grp-button-5" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">Ancestor</button>
+            </div>
+            <div class="grow0">
+                <button id="text-grp-button-6" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">Descendant</button>
+            </div>
+            <div class="grow0">
+                <button id="text-grp-button-7" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">Following</button>
+            </div>
+            <div class="grow0">
+                <button id="text-grp-button-8" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">Previous</button>
+            </div>
+        </section>
+        <br>
+        <p id="emailStatus" class="mb-0"></p>
+        <div class="input-group mb-1 p-0 m-0">
+            <span id="emailSpan" class="input-group-text" id="basic-addon1">xpath1</span>
+            <input id="xpath-1-input" type="text" class="form-control" placeholder="" aria-label="Email" aria-describedby="basic-addon1">
+            <button id="copy-xpath-1" type="button" class="btn btn-secondary svg-button btn-sm p-0"><svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M17.676 14.248C17.676 15.8651 16.3651 17.176 14.748 17.176H7.428C5.81091 17.176 4.5 15.8651 4.5 14.248V6.928C4.5 5.31091 5.81091 4 7.428 4H14.748C16.3651 4 17.676 5.31091 17.676 6.928V14.248Z"
+                            stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M10.252 20H17.572C19.1891 20 20.5 18.689 20.5 17.072V9.75195" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </g>
+                </svg>
+            </button>
+            <button id="clear-xpath-1" type="button" class="btn btn-primary bg-danger svg-button btn-sm p-0">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path d="M18 6L6 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <section class="layout mb-0">
+            <div class="grow0">
+                <button id="xpath-1-grp-button-1" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">x1&lt-&gtx2</button>
+            </div>
+            <div class="grow0">
+                <button id="xpath-1-grp-button-2" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">input</button>
+            </div>
+            <div class="grow0">
+                <button id="xpath-1-grp-button-3" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">x2</button>
+            </div>
+            <div class="grow0">
+                <button id="xpath-1-grp-button-4" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">result</button>
+            </div>
+            <div class="grow0">
+                <button id="xpath-1-grp-button-5" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">//1&lt-&gt/</button>
+            </div>
+        </section>
+
+        <br>
+        <p id="emailStatus" class="mb-0"></p>
+        <div class="input-group mb-1 p-0 m-0">
+            <span id="emailSpan" class="input-group-text" id="basic-addon1">xpath2</span>
+            <input id="xpath-2-input" type="text" class="form-control" placeholder="" aria-label="Email" aria-describedby="basic-addon1">
+            <button id="copy-xpath-2" type="button" class="btn btn-secondary svg-button btn-sm p-0"><svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M17.676 14.248C17.676 15.8651 16.3651 17.176 14.748 17.176H7.428C5.81091 17.176 4.5 15.8651 4.5 14.248V6.928C4.5 5.31091 5.81091 4 7.428 4H14.748C16.3651 4 17.676 5.31091 17.676 6.928V14.248Z"
+                            stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M10.252 20H17.572C19.1891 20 20.5 18.689 20.5 17.072V9.75195" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </g>
+                </svg>
+            </button>
+            <button id="clear-xpath-2" type="button" class="btn btn-primary bg-danger svg-button btn-sm p-0">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path d="M18 6L6 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <section class="layout mb-0">
+            <div class="grow0">
+                <button id="xpath-2-grp-button-1" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">x1&lt-&gtx2</button>
+            </div>
+            <div class="grow0">
+                <button id="xpath-2-grp-button-2" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">input</button>
+            </div>
+            <div class="grow0">
+                <button id="xpath-2-grp-button-3" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">x1</button>
+            </div>
+            <div class="grow0">
+                <button id="xpath-2-grp-button-4" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">result</button>
+            </div>
+            <div class="grow0">
+                <button id="xpath-2-grp-button-5" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">//1&lt-&gt/</button>
+            </div>
+        </section>
+
+        <br>
+        <p id="emailStatus" class="mb-0"></p>
+        <div class="input-group mb-1 p-0 m-0">
+            <span id="emailSpan" class="input-group-text" id="basic-addon1">result</span>
+            <input id="result-input" type="text" class="form-control" placeholder="" aria-label="Email" aria-describedby="basic-addon1">
+            <button id="copy-result" type="button" class="btn btn-secondary svg-button btn-sm p-0"><svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M17.676 14.248C17.676 15.8651 16.3651 17.176 14.748 17.176H7.428C5.81091 17.176 4.5 15.8651 4.5 14.248V6.928C4.5 5.31091 5.81091 4 7.428 4H14.748C16.3651 4 17.676 5.31091 17.676 6.928V14.248Z"
+                            stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M10.252 20H17.572C19.1891 20 20.5 18.689 20.5 17.072V9.75195" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </g>
+                </svg>
+            </button>
+            <button id="clear-result" type="button" class="btn btn-primary bg-danger svg-button btn-sm p-0">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path d="M18 6L6 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <section class="layout mb-0">
+            <div class="grow0">
+                <button id="result-grp-button-1" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">input</button>
+            </div>
+            <div class="grow0">
+                <button id="result-grp-button-2" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">x1</button>
+            </div>
+            <div class="grow0">
+                <button id="result-grp-button-3" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">x2</button>
+            </div>
+            <div class="grow0">
+                <button id="result-grp-button-4" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">x1//x2</button>
+            </div>
+            <div class="grow0">
+                <button id="result-grp-button-5" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">x1[x2]</button>
+            </div>
+            <div class="grow0">
+                <button id="result-grp-button-6" type="button" class="btn btn-secondary btn-sm pt-0 pb-0">x1+x2</button>
+            </div>
+        </section>
+
+    </div>
+    <script type="text/javascript" src="../js/helpers.js"></script>
+    <script type="text/javascript" src="../js/popup.js"></script>
+</body>
+
+</html>

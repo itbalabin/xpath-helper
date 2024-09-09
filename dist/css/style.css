@@ -1,0 +1,71 @@
+:root {
+    --brd: rgb(150, 150, 150);
+    --bgr: rgb(255, 255, 255);
+    --hdr: rgb(232, 232, 232);
+}
+
+body {
+    padding: 6px;
+}
+
+.container {
+    padding: 6px;
+}
+
+.layout {
+    display: block;
+    gap: 16px;
+}
+
+.layout {
+    width: 100%;
+    display: flex;
+    gap: 16px;
+}
+
+.grow0 {
+    flex-grow: 0;
+}
+
+.grow1 {
+    flex-grow: 1;
+}
+
+.form-control {
+    font-weight: 500;
+}
+
+.input-group-text {
+    font-weight: 500;
+}
+
+.btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+.btn:active {
+    opacity: 50%;
+}
+
+.input-group-text {
+    height: 28px;
+}
+
+.form-control {
+    height: 28px;
+}
+
+.svg-button {
+    width: 24px;
+}
+
+label {
+    font-size: 16px;
+}
+
+p#emailStatus {
+    text-align: left;
+    font-size: 19px;
+    font-weight: bold;
+}

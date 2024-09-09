@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "XPath Helper",
+  "version": "1.0",
+  "description": "Составляем xpath с удовольствием",
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "permissions": [
+    "cookies",
+    "scripting",
+    "storage"
+  ],
+  "icons": {
+    "16": "images/login-16.png",
+    "32": "images/login-32.png",
+    "48": "images/login-48.png",
+    "64": "images/login-64.png",
+    "128": "images/login-128.png"
+  },
+  "action": {
+    "default_icon": "images/login-64.png",
+    "default_popup": "pages/popup.html"
+  }
+}
